@@ -1,0 +1,7 @@
+google-cloud-speech==2.34.0
+google-cloud-texttospeech==2.33.0
+google-cloud-aiplatform==1.124.0
+sounddevice==0.5.3
+numpy==2.3.4
+python-dotenv==1.2.1
+simpleaudio==1.0.4
