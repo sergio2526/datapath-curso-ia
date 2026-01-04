@@ -10,7 +10,7 @@ SELECT
 FROM
   `PROJECT_ID.raw_data.cta_ridership`
 
---La primera fila de la tabla contendrá el mejor modelo, que es el que tiene el valor de AIC más bajo.
+--La primera fila de la tabla contendrá el mejor modelo, que es el que tiene el valor de AIC más bajo. (AIC: Qué tan bien se ajusta el modelo a los datos, evita el sobre ajuste)
 --Este modelo lo utilizaremos para hacer las predicciones con ML.FORECAST
 SELECT
   *
