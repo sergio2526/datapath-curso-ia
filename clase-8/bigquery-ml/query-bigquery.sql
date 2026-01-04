@@ -25,6 +25,12 @@ FROM
     STRUCT(7 AS horizon))
 
 --Anomalia identificadas en los datos históricos
+--Un registro como anomalía:
+--“Este dato tiene al menos un 90 % de probabilidad de no seguir el comportamiento normal del histórico.
+--”Ejemplos:
+--Un pico inusual de viajes
+--Una caída abrupta de usuarios
+--Un valor fuera del rango esperado para ese día/hora
 SELECT
   *
 FROM
