@@ -9,7 +9,7 @@ os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = '../clase-7/cuenta-servicio.json'
 RAG_CORPUS= os.environ.get("RAG_CORPUS")  # p.ej. "projects/xxx/locations/us-central1/ragCorpora/id-corpus"
 
 model = "gemini-2.5-flash"
-model_live = "gemini-live-2.5-flash-preview-native-audio-09-2025"
+model_live = "gemini-live-2.5-flash-native-audio"
 
 # === Subagentes ===
 
