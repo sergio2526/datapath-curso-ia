@@ -14,14 +14,14 @@ model_live = "gemini-live-2.5-flash-preview-native-audio-09-2025"
 # === Subagentes ===
 
 saludo_agent = Agent(
-    model=model,
+    model=model_live,
     name='agente_saludo',
     description='Responde saludos cordiales y se presenta de forma amigable.',
     instruction='Responde de manera amable y corta a saludos como "hola", "buenos días", "qué tal", etc. Usa emojis 😄.'
 )
 
 vuelos_agent = Agent(
-    model=model,
+    model=model_live,
     name='agente_vuelos',
     description='Busca y proporciona información sobre vuelos.',
     instruction=(
@@ -33,7 +33,7 @@ vuelos_agent = Agent(
 )
 
 restaurantes_agent = Agent(
-    model=model,
+    model=model_live,
     name='agente_restaurantes',
     description='Busca y proporciona información sobre restaurantes.',
     instruction=(
@@ -59,7 +59,7 @@ ask_vertex_retrieval = VertexAiRagRetrieval(
 )
 
 rag_agent = Agent(
-    model=model,
+    model=model_live,
     name="agente_rag",
     description="Recupera información del corpus RAG sobre vuelos y restaurantes.",
     instruction="Usa esta herramienta para recuperar información del corpus RAG antes de invocar otros agentes.",
@@ -69,7 +69,7 @@ rag_agent = Agent(
 # === Agente principal (root) ===
 
 root_agent = Agent(
-    model=model,
+    model=model_live,
     name='root_agent',
     description='Agente orquestador que decide qué subagente debe responder. Siempre consulta primero la base de conocimiento (RAG) antes de decidir.',
     instruction=("""
